@@ -9,18 +9,73 @@
     h1 {
       color: rgba(0, 24, 79, 1);
     }
+    h2,
+    h3 {
+      margin: 0;
+    }
+
+    body {
+      max-height: 100svh;
+      padding: 0px 100px;
+      margin: auto;
+      background-color: rgb(41, 41, 41);
+    }
     .drinks-container {
       text-transform: capitalize;
+
+      margin: auto;
+    }
+    .top-part {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .drink-name {
+      color: hsl(84, 100%, 85%);
+      font-size: 200%;
+      margin: 0;
+      height: 100%;
+    }
+    .drink-image {
+      max-height: 69svh;
+    }
+
+    .drink-image img {
+      height: 69svh;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .drink-price {
+      color: hsl(84, 100%, 68%);
+      height: 100%;
+      font-size: 150%;
+    }
+
+    .back-button {
+      text-decoration: none;
+      background-color: #d2d2d2;
+      padding: 2ch 4ch;
+      color: black;
+      margin-left: auto;
     }
   </style>
 
   <body>
     <h1>At foo bar</h1>
     <div class="drinks-container">
-      <h2><%= drinks.name %></h2>
-      <img src="<%= drinks.image %>.png" />
-      <h3><%= drinks.price %></h3>
-      <a href="/drinks">Go Back</a>
+      <div class="top-part">
+        <div class="drink-name">
+          <h2><%= drinks.name %></h2>
+        </div>
+        <div class="drink-price">
+          <h3><%= drinks.price %></h3>
+        </div>
+      </div>
+      <div class="drink-image">
+        <img src="<%= drinks.image %>.png" />
+      </div>
+      <a href="/drinks" class="back-button">Go Back</a>
     </div>
   </body>
 </html>
