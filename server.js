@@ -28,8 +28,8 @@ app.get("/drinks", (req, res) => {
   res.render("index.ejs", { drinks });
 });
 
-app.get("/drinks/:id", (req, res) => {
-  res.send(req.params.id);
+app.get("/drinks/:indexNumber", (req, res) => {
+  res.render("show.ejs", { drinks: drinks[req.params.indexNumber] });
 });
 
 // -----------------------------------------------------

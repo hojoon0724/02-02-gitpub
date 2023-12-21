@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    h1 {
+      color: rgba(0, 24, 79, 1);
+    }
+    .drinks-container {
+      text-transform: capitalize;
+    }
+  </style>
+
+  <body>
+    <h1>At foo bar</h1>
+    <div class="drinks-container">
+      <h2><%= drinks.name %></h2>
+      <img src="<%= drinks.image %>.png" />
+      <h3><%= drinks.price %></h3>
+      <a href="/drinks">Go Back</a>
+    </div>
+  </body>
+</html>
