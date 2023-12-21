@@ -20,7 +20,7 @@ const app = express();
 // GET requests
 // -----------------------------------------------------
 app.get("/", (req, res) => {
-  res.send(`root response`);
+  res.send(`This is Gitpub App`);
 });
 
 // -----------------------------------------------------
