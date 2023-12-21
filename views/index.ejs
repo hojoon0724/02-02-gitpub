@@ -9,9 +9,17 @@
     h1 {
       color: rgba(0, 24, 79, 1);
     }
+    .drinks-container {
+
+    }
   </style>
 
   <body>
     <h1>gitPub</h1>
+    <div class="drinks-container">
+        <% for (let i = 0; i<drinks.length; i++) { %>
+            <li><%= drinks[i].name %></li>
+            <% } %>
+    </div>
   </body>
 </html>
