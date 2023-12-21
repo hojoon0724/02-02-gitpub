@@ -2,6 +2,7 @@
 // Dependencies
 // -----------------------------------------------------
 const express = require("express");
+const drinks = require("./models/drinks.js");
 
 // -----------------------------------------------------
 // Application Object
@@ -21,6 +22,10 @@ const app = express();
 // -----------------------------------------------------
 app.get("/", (req, res) => {
   res.send(`This is Gitpub App`);
+});
+
+app.get("/drinks", (req, res) => {
+  res.send(drinks);
 });
 
 // -----------------------------------------------------
